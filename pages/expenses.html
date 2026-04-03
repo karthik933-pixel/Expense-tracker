@@ -12,9 +12,27 @@
         <div class="expenses-box">
             <div class="btn-container"><button class="add-btn">+</button></div>
         </div>  
+    </div>
     <div class="overlay"></div>
-    <div class="expenseCard" id="expenseCard">
+    <div class="expenseCard">
+        <div class="amount-row">
+        <p>Amount</p>
+         <input type="number">
+        </div>
+        <div class="amount-row">
+        <label for="category-select">Categories</label>
+        <select id="category-select" name="category">
+            <option value="food">Food</option>
+            <option value="snacks">Snacks</option>
+            <option value="health">Health</option>
+            <option value="shopping">Shopping</option>
+            <option value="Others">Others</option>
+        </select>
         
+</div>
+    <div class="amount-row"><p>Date</p><input type="date"></div>
+    <div class="amount-row" ><p>Note</p><textarea></textarea></div>
+    <div><button class="Add">Add</button></div>
     </div>
 
     <div class="nav-bottom">
@@ -35,12 +53,21 @@
 
     const btn = document.querySelector('.add-btn')
     const overlay = document.querySelector('.overlay')
+    const expenseCard=document.querySelector('.expenseCard')
+    const Add=document.querySelector('.Add')
 
     btn.addEventListener('click', function() {
     overlay.classList.add('active')
+    expenseCard.classList.add('active')
+    
 })
     overlay.addEventListener('click',function(){
         overlay.classList.remove('active')
+        expenseCard.classList.remove('active')
+    })
+    Add.addEventListener('click',function(){
+        overlay.classList.remove('active')
+        expenseCard.classList.remove('active')
     })
 </script>
 
