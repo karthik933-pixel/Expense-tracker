@@ -19,8 +19,6 @@ body {
 
 h1, h2, h3 {
     font-family: 'Bebas Neue', sans-serif;
-
-    
 }
 
 .value{
@@ -32,20 +30,17 @@ h1, h2, h3 {
     background-color: #242424;
     padding: 30px;
     width:300px;
-    
-    transition: background-color 0.2s ease, box-shadow 0.2 ease;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 .summary-section {
     display: flex;
     gap: 70px;
     padding: 40px 48px;
     justify-content: center;
-
 }
 .summary-card:hover{
     background-color:black ;
     box-shadow: 3px 4px 7px rgb(0, 0, 0);
-
 }
 
 .nav-bottom {
@@ -78,17 +73,18 @@ h1, h2, h3 {
     background-color: #bf9541;
     color: #1a1a1a;
 }
+
 .Motivation-quote{
     text-align: center;
     font-size: 60px;
 }
 .top{
     color: #bf9541;
-    
 }
 .bottom{
-        color:#f0e6d0;
+    color:#f0e6d0;
 }
+
 .expenses-box-container {
     display: flex;
     padding: 70px 100px;
@@ -125,6 +121,16 @@ h1, h2, h3 {
 }
 
 .add-btn:hover {
-    background-color: #9f7c36;
+    background-color: #bf7c36;
     transform: scale(1.1);
+}
+
+.overlay{
+    position: fixed;
+    inset:0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+.overlay.active{
+    display:block;
 }

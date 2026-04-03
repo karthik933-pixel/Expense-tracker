@@ -6,14 +6,17 @@
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="d:\Expense-tracker\style.css">
 </head>
-<body>
+<body> 
     <div style="display:flex;justify-content: center; position: relative;top: 30px; gap: 0;" ><h1 style="font-size: 43px; text-align: center; color: #f0e6d0; ">Expenses</h1></div>
     <div class="expenses-box-container">
         <div class="expenses-box">
             <div class="btn-container"><button class="add-btn">+</button></div>
-        </div>
+        </div>  
+    <div class="overlay"></div>
+    <div class="expenseCard" id="expenseCard">
         
     </div>
+
     <div class="nav-bottom">
         <div class="page">
             <p>Stat</p>
@@ -28,5 +31,18 @@
             <p>Ai Analysis</p>
         </div>
     </div>
+    <script>
+
+    const btn = document.querySelector('.add-btn')
+    const overlay = document.querySelector('.overlay')
+
+    btn.addEventListener('click', function() {
+    overlay.classList.add('active')
+})
+    overlay.addEventListener('click',function(){
+        overlay.classList.remove('active')
+    })
+</script>
+
 </body>
 </html>
